@@ -1,1 +1,4 @@
-<p>post-create works!</p>
+<textarea rows="6" #postInput></textarea>
+<hr>
+<button (click)="onAddPost(postInput)">Save Post</button>
+<p>{{newPost}}</p>
