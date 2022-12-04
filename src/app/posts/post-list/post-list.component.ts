@@ -12,7 +12,7 @@ export class PostListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  post = [
+  posts = [
     {
     title: 'First Post',
     content:'This is first post content'
