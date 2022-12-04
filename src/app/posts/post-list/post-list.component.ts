@@ -15,7 +15,3 @@ export class PostListComponent implements OnInit {
   posts: post[] = [];
   
 }
-export type post = {
-  title?: String,
-  content?:String
-}
