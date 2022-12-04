@@ -15,7 +15,7 @@ export class PostCreateComponent implements OnInit {
   enteredContent = '';
   enteredTitle = '';
   @Output()
-  postCreated = new EventEmitter();
+  postCreated = new EventEmitter<Post>();
 
   newPost = '';
   onAddPost(value:HTMLTextAreaElement) {
