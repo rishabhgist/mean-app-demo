@@ -8,8 +8,12 @@ export class PostService {
   private posts: Post[] = [];
 
   
-  public get getPost() {
-    return this.posts;
+  getPost() {
+    return [...this.posts];
+  }
+
+  addPost(post: Post) {
+    this.posts.push(post);
   }
   
   constructor() { }
