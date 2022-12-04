@@ -13,12 +13,15 @@ export class PostCreateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   @Output()
   postCreated = new EventEmitter<Post>();
 
   newPost = '';
   onAddPost(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
     const post:Post = {
       title: form.value.title,
       content:form.value.content
