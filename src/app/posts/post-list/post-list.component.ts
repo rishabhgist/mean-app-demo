@@ -12,19 +12,10 @@ export class PostListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  posts = [
-    {
-    title: 'First Post',
-    content:'This is first post content'
-    },
-    {
-    title: 'Second Post',
-    content:'This is third post content'
-    },
-    {
-    title: 'Third Post',
-    content:'This is third post content'
-    }
-  ]
-
+  posts: post[] = [];
+  
+}
+export type post = {
+  title?: String,
+  content?:String
 }
