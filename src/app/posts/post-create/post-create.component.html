@@ -1,4 +1,6 @@
-<textarea rows="6" #postInput></textarea>
-<hr>
-<button (click)="onAddPost(postInput)">Save Post</button>
-<p>{{newPost}}</p>
+<mat-card>
+    <mat-form-field>
+        <textarea matInput rows="6" #postInput></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="onAddPost(postInput)">Save Post</button>
+</mat-card>
