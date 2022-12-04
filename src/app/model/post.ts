@@ -1,4 +1,4 @@
-export type post = {
+export type Post = {
   title?: String,
   content?:String
 }

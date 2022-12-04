@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter,Output} from '@angular/core';
+import { Post } from 'src/app/model/post';
 
 @Component({
   selector: 'app-post-create',
@@ -18,7 +19,7 @@ export class PostCreateComponent implements OnInit {
 
   newPost = '';
   onAddPost(value:HTMLTextAreaElement) {
-    const post = {
+    const post:Post = {
       title: this.enteredTitle,
       content: this.enteredContent
     }

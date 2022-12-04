@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Post } from 'src/app/model/post';
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -12,6 +12,6 @@ export class PostListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  posts: post[] = [];
+  posts: Post[] = [];
   
 }
