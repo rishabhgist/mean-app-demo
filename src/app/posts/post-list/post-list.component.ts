@@ -14,7 +14,6 @@ export class PostListComponent implements OnInit {
     this.posts = this.postService.getPost();
   }
 
-  @Input()
   posts: Post[] = [];
   
 }
