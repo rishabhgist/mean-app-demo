@@ -26,6 +26,4 @@ export class PostListComponent implements OnInit, OnDestroy {
       this.posts = posts;
     });
   }
-
-  
 }
