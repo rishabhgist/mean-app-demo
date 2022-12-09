@@ -1,7 +1,9 @@
-import express from 'express';
+const express = require('express');
 
 const app = express();
 
 app.use((req, res, next) => {
-    next();
+    res.send('Express Welcome');
 });
+
+module.exports = app;
