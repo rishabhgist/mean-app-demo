@@ -1,1 +1,7 @@
-import http from 'http';
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.end('response');
+});
+
+server.listen(process.env.PORT || 3000);
