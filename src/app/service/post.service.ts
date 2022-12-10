@@ -20,9 +20,11 @@ export class PostService {
     return this.postUpdate.asObservable();
   }
   addPost(post: Post) {
-    this.posts.push(post);
-    this.postUpdate.next([...this.posts]);
+    this.http.post<{ message: string }>('http://localhost:3000/api/posts', post).subscribe((res) => {
+      console.log(res);
+      this.posts.push(post);
+      this.postUpdate.next([...this.posts]);
+    })
   }
-  
   constructor(private http:HttpClient) { }
 }
