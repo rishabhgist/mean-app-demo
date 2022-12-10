@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const Post = require('./models/posts');
 
 const app = express();
 
@@ -13,7 +14,10 @@ app.use((req, res, next) => {
 });
 
 app.post("/api/posts", (req, res, next) => {
-    const posts = req.body ;
+    const posts = new Post({
+        title: req.body.title,
+        content: req.body.content
+    });
     console.log(posts);
     res.status(201).json({
         message:'Post Added !'
