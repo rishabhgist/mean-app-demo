@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.post("/api/posts", (req, res, next) => {
-    const posts = req.body;
+    const posts = req.body ;
     console.log(posts);
     res.status(201).json({
         message:'Post Added !'
@@ -33,7 +33,7 @@ app.get('/api/posts', (req, res, next) => {
         }
     ];
     res.status(200).json({
-        message: 'Posts fetched  successfully',
+        message: 'Posts fetched successfully',
         posts: posts
     });
 });
